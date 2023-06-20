@@ -10,9 +10,10 @@ import ProductList from './Components/ProductList';
 import { productData } from "./data";
 import { useState } from 'react';
 import DetailCard from './Components/DetailCard';
-import AddCard from './Components/AddCard';
+// import AddCard from './Components/AddCard';
 import Filter from './Components/Filter';
 import Footer from './Components/Footer';
+import Administration from './Components/Administration';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
     <div className="App">
           <Router>
           <Header/>
-          <AddCard  handleAdd={handleAdd}/>
+          {/* <AddCard  handleAdd={handleAdd}/> */}
+
           <Filter textSearch={textSearch} handleSearch={handleSearch}  />
          
             <Routes>
@@ -35,6 +37,7 @@ function App() {
               <Route path="/filter" element={<Filter textSearch={textSearch} handleSearch={handleSearch}  />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
+              <Route path="/administration" element={<Administration />} />
               <Route path="/details/:id"  element={<DetailCard product={data}  />}/>
             </Routes>
             <Footer/>

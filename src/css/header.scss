@@ -53,4 +53,13 @@
         align-items: center;
         justify-content: space-between;
     }
+    .connexion-col{
+        display: flex;
+        button{
+            border: 2px solid transparent;
+            &:hover{
+                border: 2px solid white;
+            }
+        }
+    }
 }

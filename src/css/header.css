@@ -62,4 +62,18 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.header .connexion-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .connexion-col button {
+  border: 2px solid transparent;
+}
+
+.header .connexion-col button:hover {
+  border: 2px solid white;
+}
 /*# sourceMappingURL=header.css.map */

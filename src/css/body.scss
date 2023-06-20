@@ -228,3 +228,12 @@ form{
 .filter-section{
     padding: 0  0 20px;
 }
+.search-form{
+    background-color: #8b9620;
+    button{
+        border: 2px solid transparent;
+        &:hover{
+            border: 2px solid white;
+        }
+    }
+}
