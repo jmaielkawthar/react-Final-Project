@@ -316,4 +316,28 @@ form [type=file], form [type=date] {
 .search-form button:hover {
   border: 2px solid white;
 }
+
+.sidebar-menu {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.sidebar-menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 30px 30px 30px 90px;
+  background-color: #8b9620;
+  border: 2px solid transparent;
+}
+
+.sidebar-menu a:hover {
+  color: #8b9620;
+  border: 2px solid #8b9620;
+  background-color: white;
+}
 /*# sourceMappingURL=body.css.map */

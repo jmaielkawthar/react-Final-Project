@@ -1,9 +1,13 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Content from '../Components/Content';
-
+import Users from '../Components/Users';
+import Products from '../Components/Products';
+import Transportations from '../Components/Transportations';
+import Commandes from '../Components/Commandes';
+import Categories from '../Components/Categories';
 
 const Administration = () => {
   return (
@@ -14,25 +18,34 @@ const Administration = () => {
           <Col sm={2}>
           <div className="sidebar">
             <ul className="sidebar-menu">
-              <li>
-                <Link to="/home">Home</Link>
+              <li class="user">
+                <Link to="/administration/Users">Users</Link>
               </li>
-              <li>
-                <Link to="/about">About</Link>
+              <li class="product">
+                <Link to="/administration/Products">Products</Link>
               </li>
-              <li>
-                <Link to="/products">Products</Link>
+              <li class="transport">
+                <Link to="/administration/Transportations">Transportations</Link>
               </li>
-              <li>
-                <Link to="/contact">Contact</Link>
+              <li class="categorie">
+                <Link to="/administration/Categories">Categories</Link>
+              </li>
+              <li class="commande">
+                <Link to="/administration/Commandes">Commandes</Link>
               </li>
             </ul>
           </div>
 
           </Col>
           <Col sm={10}>
-            <div className="contenu">
-
+          <div className="contenu">
+              <Routes>
+                <Route path="/administration/Users" component={Users} />
+                <Route path="/administration/Products" component={Products} />
+                <Route path="/administration/Transportations" component={Transportations} />
+                <Route path="/administration/Categories" component={Categories} />
+                <Route path="/administration/Commandes" component={Commandes} />
+              </Routes>
             </div>
           </Col>
         </Row>
