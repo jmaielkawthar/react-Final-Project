@@ -40,11 +40,11 @@ const Administration = () => {
           <Col sm={10}>
           <div className="contenu">
               <Routes>
-                <Route path="/administration/Users" component={Users} />
-                <Route path="/administration/Products" component={Products} />
-                <Route path="/administration/Transportations" component={Transportations} />
-                <Route path="/administration/Categories" component={Categories} />
-                <Route path="/administration/Commandes" component={Commandes} />
+              <Route path="/administration/Users" element={<Users />} />
+                <Route path="/administration/Products" element={<Products />} />
+                <Route path="/administration/Transportations" element={<Transportations />} />
+                <Route path="/administration/Categories" element={<Categories />} />
+                <Route path="/administration/Commandes" element={<Commandes />} />
               </Routes>
             </div>
           </Col>

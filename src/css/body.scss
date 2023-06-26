@@ -237,14 +237,64 @@ form{
         }
     }
 }
+
 .sidebar-menu{
     padding-inline-start: 0;
     list-style-type: none;
     text-align: left;
     li{
+        border-bottom: 1px solid black;
+        &:last-child{
+            border-bottom: 1px solid transparent;
+        }
         &.icon{
 
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 32px;
+                width: 32px;
+
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+            }
         }
+        &.user{
+            @extend li.icon;
+            &::after {
+                background-image: url(../img/user.png);
+            }
+        }
+        &.product{
+            @extend li.icon;
+            &::after {
+                background-image: url(../img/support.png);
+            }
+        }
+        &.transport{
+            @extend li.icon;
+            &::after {
+                background-image: url(../img/delivery.png);
+            }
+        }
+        &.categorie{
+            @extend li.icon;
+            &::after {
+                background-image: url(../img/category.png);
+            }
+        }
+        &.commande{
+            @extend li.icon;
+            &::after {
+                background-image: url(../img/order.png);
+            }
+        }
+
     }
     a{
         display: flex;

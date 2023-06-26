@@ -43,11 +43,11 @@ function App() {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/administration" element={<Administration />} />
-              <Route path="/Users" element={<Users />} />
+              {/* <Route path="/Users" element={<Users />} />
               <Route path="/Products" element={<Products />} />
               <Route path="/Transportations" element={<Transportations />} />
               <Route path="/Categories" element={<Categories />} />
-              <Route path="/Commandes" element={<Commandes />} />
+              <Route path="/Commandes" element={<Commandes />} /> */}
               <Route path="/details/:id"  element={<DetailCard product={data}  />}/>
               
             </Routes>

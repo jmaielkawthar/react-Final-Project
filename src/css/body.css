@@ -324,6 +324,52 @@ form [type=file], form [type=date] {
   text-align: left;
 }
 
+.sidebar-menu li {
+  border-bottom: 1px solid black;
+}
+
+.sidebar-menu li:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.sidebar-menu li.icon, .sidebar-menu li.user, .sidebar-menu li.product, .sidebar-menu li.transport, .sidebar-menu li.categorie, .sidebar-menu li.commande {
+  position: relative;
+}
+
+.sidebar-menu li.icon::after, .sidebar-menu li.user::after, .sidebar-menu li.product::after, .sidebar-menu li.transport::after, .sidebar-menu li.categorie::after, .sidebar-menu li.commande::after {
+  content: "";
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+}
+
+.sidebar-menu li.user::after {
+  background-image: url(../img/user.png);
+}
+
+.sidebar-menu li.product::after {
+  background-image: url(../img/support.png);
+}
+
+.sidebar-menu li.transport::after {
+  background-image: url(../img/delivery.png);
+}
+
+.sidebar-menu li.categorie::after {
+  background-image: url(../img/category.png);
+}
+
+.sidebar-menu li.commande::after {
+  background-image: url(../img/order.png);
+}
+
 .sidebar-menu a {
   display: -webkit-box;
   display: -ms-flexbox;
